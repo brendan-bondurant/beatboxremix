@@ -5,7 +5,16 @@ class LinkedList
   end
 
   def append(data)
-    @head ||= Node.new(data) #with memoization
+    if self.empty?
+      @head = Node.new(data)
+    else
+      current_node = @head
+      new_node = Node.new(data)
+      while current_node.next_node != nil
+        current_node = current_node.next_node
+      end
+      current_node.next_node = new_node
+    end
   end
 
   def count

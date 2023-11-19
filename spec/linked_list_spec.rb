@@ -20,7 +20,7 @@ RSpec.describe LinkedList do
       expect(list.head.data).to eq("doop")
       expect(list.head.next_node).to eq(nil)
     end
-    
+
     it 'can append more than one' do
       list = LinkedList.new
       list.append("doop")
@@ -28,7 +28,7 @@ RSpec.describe LinkedList do
       expect(list.head.next_node).to eq(nil)
       list.append("deep")
       expect(list.count).to eq(2)
-      expect(list.head.next_node).to eq("deep")
+      expect(list.head.next_node.data).to eq("deep")
     end
     
     it 'can test if head is empty' do
