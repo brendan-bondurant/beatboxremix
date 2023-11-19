@@ -16,8 +16,17 @@ RSpec.describe LinkedList do
       list.append("doop")
       expect(list.head.data).to eq("doop")
       expect(list.head.next_node).to eq(nil)
+    end
+    it 'can be counted' do
+      list = LinkedList.new
+      list.append("doop")
       expect(list.count).to eq(1)
-      expect(list.to_string).to eq("doop")
+    end
+
+    it 'can be turned to a string' do 
+      list = LinkedList.new
+      list.append("doop")
+    expect(list.to_string).to eq("doop")
     end
   end
 end
