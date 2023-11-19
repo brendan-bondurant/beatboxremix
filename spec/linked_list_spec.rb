@@ -17,6 +17,14 @@ RSpec.describe LinkedList do
       expect(list.head.data).to eq("doop")
       expect(list.head.next_node).to eq(nil)
     end
+
+    it 'can test if head is empty' do
+      list = LinkedList.new
+      expect(list.empty?).to eq(true)
+      list.append("doop")
+      expect(list.empty?).to eq(false)
+    end
+
     it 'can be counted' do
       list = LinkedList.new
       list.append("doop")
