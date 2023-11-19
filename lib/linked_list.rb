@@ -22,4 +22,8 @@ class LinkedList
   def empty?
     head.nil? 
   end
+
+  def to_string
+    "#{head.data}"
+  end
 end
