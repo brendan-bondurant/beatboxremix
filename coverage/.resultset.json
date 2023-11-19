@@ -1,0 +1,85 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/brendanbondurant/3mod/intermission/beatboxremix/lib/node.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          9,
+          9,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/brendanbondurant/3mod/intermission/beatboxremix/lib/linked_list.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          7,
+          null,
+          null,
+          1,
+          6,
+          5,
+          null,
+          1,
+          1,
+          1,
+          0,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          2,
+          2,
+          2,
+          2,
+          1,
+          1,
+          null,
+          2,
+          null,
+          null,
+          1,
+          10,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/brendanbondurant/3mod/intermission/beatboxremix/spec/node_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      }
+    },
+    "timestamp": 1700423502
+  }
+}
