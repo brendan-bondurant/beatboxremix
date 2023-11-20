@@ -49,5 +49,29 @@ RSpec.describe LinkedList do
       list.append("doop")
       expect(list.to_string).to eq("doop")
     end
+
+    it "needs to turn to turn to string when count > 1" do
+      list = LinkedList.new
+      list.append('doop')
+      list.append('deep')
+      list.append('plop')
+      list.append('suu')
+      list.append('dop')
+      list.append('woo')
+      
+      expect(list.to_string).to eq("doop deep plop suu dop woo")      
+    end
+    
+    xit "needs to be able to insert at a specific point" do
+      list = LinkedList.new
+      list.append('doop')
+      list.append('deep')
+      list.append('plop')
+      list.append('dop')
+      list.append('woo')
+      expect(list.to_string).to eq("doop deep plop suu dop woo")  
+      list.insert(3, 'suu')
+      expect(list.to_string).to eq("doop deep plop suu dop woo")      
+    end
   end
 end
