@@ -15,4 +15,10 @@ RSpec.describe Node do
       expect(node.next_node).to eq(nil)
     end
   end
+  describe 'tail' do
+    it 'if next_node == nil, it is the tail' do
+      node = Node.new("plop")
+      expect(node.tail?).to eq(true)
+    end
+  end
 end
