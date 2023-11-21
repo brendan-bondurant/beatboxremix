@@ -62,14 +62,14 @@ RSpec.describe LinkedList do
       expect(list.to_string).to eq("doop deep plop suu dop woo")      
     end
     
-    xit "needs to be able to insert at a specific point" do
+    it "needs to be able to insert at a specific point" do
       list = LinkedList.new
       list.append('doop')
       list.append('deep')
       list.append('plop')
       list.append('dop')
       list.append('woo')
-      expect(list.to_string).to eq("doop deep plop suu dop woo")  
+      expect(list.to_string).to eq("doop deep plop dop woo")  
       list.insert(3, 'suu')
       expect(list.to_string).to eq("doop deep plop suu dop woo")      
     end

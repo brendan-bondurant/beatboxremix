@@ -43,4 +43,17 @@ class LinkedList
     new_string << current_node.data
     new_string.join(" ")
   end
+
+  def insert(location, data)
+    new_node = Node.new(data)
+    prior_node = node_at(head, location - 1)
+    next_node = node_at(head, location)
+    prior_node.next_node = new_node
+    new_node.next_node = next_node
+  end
+
+  def node_at(node, location, counter = 0)
+    return node if location == counter
+    node_at(node.next_node, location, counter += 1)
+  end
 end
