@@ -46,14 +46,24 @@ class LinkedList
 
   def insert(location, data)
     new_node = Node.new(data)
-    prior_node = node_at(head, location - 1)
-    next_node = node_at(head, location)
+    prior_node = node_at(location - 1)
+    next_node = node_at(location)
     prior_node.next_node = new_node
     new_node.next_node = next_node
+    return new_node
   end
 
-  def node_at(node, location, counter = 0)
-    return node if location == counter
-    node_at(node.next_node, location, counter += 1)
+  # def node_at(node, location, counter = 0)
+  #   return node if location == counter
+  #   node_at(node.next_node, location, counter += 1)
+  # end
+
+  def node_at(index, count = 0)
+    current_node = @head
+    while count < index && current_node
+      current_node = current_node.next_node
+      count += 1
+    end
+    current_node
+    end
   end
-end

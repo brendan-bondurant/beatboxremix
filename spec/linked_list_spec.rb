@@ -73,5 +73,18 @@ RSpec.describe LinkedList do
       list.insert(3, 'suu')
       expect(list.to_string).to eq("doop deep plop suu dop woo")      
     end
+
+    it 'tells you where a node is located' do
+      list = LinkedList.new
+      list.append('doop')
+      list.append('deep')
+      list.append('plop')
+      list.append('dop')
+      list.append('woo')
+      node = list.node_at(3)
+      expect(node.data).to eq('dop')
+    
+    end
+
   end
 end
