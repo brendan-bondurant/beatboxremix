@@ -58,12 +58,12 @@ class LinkedList
   #   node_at(node.next_node, location, counter += 1)
   # end
 
-  def node_at(index, count = 0)
-    current_node = @head
-    while count < index && current_node
-      current_node = current_node.next_node
-      count += 1
+    def node_at(index, counter = 0)
+      current_node = @head
+      while counter < index && current_node
+        current_node = current_node.next_node
+        counter += 1
+      end
+      current_node
     end
-    current_node
-    end
-  end
+end
