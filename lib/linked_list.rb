@@ -95,4 +95,10 @@ class LinkedList
     new_tail.next_node = nil
     return old_tail.data
   end
+
+  def shift
+    former_head = @head
+    @head = @head.next_node
+    return former_head.data
+  end
 end
