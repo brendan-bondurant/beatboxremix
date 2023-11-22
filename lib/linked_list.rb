@@ -5,16 +5,21 @@ class LinkedList
   end
 
   def append(data)
-    if self.empty?
+    if empty?
       @head = Node.new(data)
     else
       current_node = @head
-      new_node = Node.new(data)
       while current_node.next_node != nil
         current_node = current_node.next_node
       end
-      current_node.next_node = new_node
+      current_node.next_node = Node.new(data)
     end
+  end
+
+  def prepend(data)
+    new_node = Node.new(data)
+    new_node.next_node = head
+    @head = new_node
   end
 
   def count
@@ -53,17 +58,12 @@ class LinkedList
     return new_node
   end
 
-  # def node_at(node, location, counter = 0)
-  #   return node if location == counter
-  #   node_at(node.next_node, location, counter += 1)
-  # end
-
-    def node_at(index, counter = 0)
-      current_node = @head
-      while counter < index && current_node
-        current_node = current_node.next_node
-        counter += 1
-      end
-      current_node
+  def node_at(index, counter = 0)
+    current_node = @head
+    while counter < index && current_node
+      current_node = current_node.next_node
+      counter += 1
     end
+    current_node
+  end
 end
