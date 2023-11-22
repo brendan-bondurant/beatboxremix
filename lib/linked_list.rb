@@ -66,4 +66,17 @@ class LinkedList
     end
     current_node
   end
+
+  def find(start, count)
+    counter = 0
+    new_string = []
+    current_node = node_at(start)
+    return current_node.data if count == 1
+    while counter < count
+      new_string << current_node.data
+      current_node = current_node.next_node
+      counter += 1
+    end
+    new_string.join(" ")
+  end
 end
