@@ -88,4 +88,11 @@ class LinkedList
     end
     false
   end
+
+  def pop
+    new_tail = node_at(count - 2)
+    old_tail = new_tail.next_node
+    new_tail.next_node = nil
+    return old_tail.data
+  end
 end
