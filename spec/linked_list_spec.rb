@@ -82,9 +82,19 @@ RSpec.describe LinkedList do
       list.append('dop')
       list.append('woo')
       node = list.node_at(3)
-      expect(node.data).to eq('dop')
-    
+      expect(node.data).to eq('dop')    
     end
 
+    it "will add nodes to the beginning of the list" do
+      list = LinkedList.new
+      list.append("plop")
+      list.append("suu")
+      
+      expect(list.to_string).to eq("plop suu")
+      list.prepend("dop")
+      
+      expect(list.head.data).to eq("dop")
+      expect(list.to_string).to eq("dop plop suu")
+    end
   end
 end
