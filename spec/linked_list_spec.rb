@@ -164,5 +164,18 @@ RSpec.describe LinkedList do
       expect(list.shift).to eq("woo")
       expect(list.to_string).to eq("shi shu blop")
     end
+
+    it "clears the list" do 
+      list = LinkedList.new
+      list.append("deep")
+      list.append("woo")
+      list.append("shi")
+      list.append("shu")
+      list.append("blop")
+
+      expect(list.to_string).to eq("deep woo shi shu blop")
+      list.clear
+      expect(list.to_string).to eq([])
+    end
   end
 end
