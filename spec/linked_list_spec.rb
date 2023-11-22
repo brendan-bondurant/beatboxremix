@@ -145,10 +145,24 @@ RSpec.describe LinkedList do
       list.append("shu")
       list.append("blop")
 
-      expect(list.pop). to eq("blop")
+      expect(list.pop).to eq("blop")
       expect(list.to_string).to eq("deep woo shi shu")
-      expect(list.pop). to eq("shu")
+      expect(list.pop).to eq("shu")
       expect(list.to_string).to eq("deep woo shi")
+    end
+
+    it "removes first element and returns it" do
+      list = LinkedList.new
+      list.append("deep")
+      list.append("woo")
+      list.append("shi")
+      list.append("shu")
+      list.append("blop")
+
+      expect(list.shift).to eq("deep")
+      expect(list.to_string).to eq("woo shi shu blop")
+      expect(list.shift).to eq("woo")
+      expect(list.to_string).to eq("shi shu blop")
     end
   end
 end
