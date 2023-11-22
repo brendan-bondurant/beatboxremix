@@ -101,4 +101,8 @@ class LinkedList
     @head = @head.next_node
     return former_head.data
   end
+
+  def clear
+    @head = nil
+  end
 end
