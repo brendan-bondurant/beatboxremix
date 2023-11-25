@@ -49,5 +49,133 @@ RSpec.describe LinkedList do
       list.append("doop")
       expect(list.to_string).to eq("doop")
     end
+
+    it "needs to turn to turn to string when count > 1" do
+      list = LinkedList.new
+      list.append('doop')
+      list.append('deep')
+      list.append('plop')
+      list.append('suu')
+      list.append('dop')
+      list.append('woo')
+      
+      expect(list.to_string).to eq("doop deep plop suu dop woo")      
+    end
+    
+    it "needs to be able to insert at a specific point" do
+      list = LinkedList.new
+      list.append('doop')
+      list.append('deep')
+      list.append('plop')
+      list.append('dop')
+      list.append('woo')
+      expect(list.to_string).to eq("doop deep plop dop woo")  
+      list.insert(3, 'suu')
+      expect(list.to_string).to eq("doop deep plop suu dop woo")      
+    end
+
+    it 'tells you where a node is located' do
+      list = LinkedList.new
+      list.append('doop')
+      list.append('deep')
+      list.append('plop')
+      list.append('dop')
+      list.append('woo')
+      node = list.node_at(3)
+      expect(node.data).to eq('dop')    
+    end
+
+    it "will add nodes to the beginning of the list" do
+      list = LinkedList.new
+      list.append("plop")
+      list.append("suu")
+      
+      expect(list.to_string).to eq("plop suu")
+      list.prepend("dop")
+      
+      expect(list.head.data).to eq("dop")
+      expect(list.to_string).to eq("dop plop suu")
+    end
+
+    it "1st parameter indicates where to look and second specifies how many to return" do
+      list = LinkedList.new
+      list.append("deep")
+      list.append("woo")
+      list.append("shi")
+      list.append("shu")
+      list.append("blop")
+
+      expect(list.to_string).to eq("deep woo shi shu blop")
+      expect(list.find(2, 1)).to eq("shi")
+
+    
+    end
+
+    
+    it "1st parameter indicates where to start and second specifies how many to return (multiple return)" do
+      list = LinkedList.new
+      list.append("deep")
+      list.append("woo")
+      list.append("shi")
+      list.append("shu")
+      list.append("blop")
+
+
+      expect(list.find(1, 2)).to eq("woo shi")
+      expect(list.find(1, 3)).to eq("woo shi shu")
+    end
+
+    it "gives true or false if the value is in the list" do
+      list = LinkedList.new
+      list.append("deep")
+      list.append("woo")
+      list.append("shi")
+      list.append("shu")
+      list.append("blop")
+
+      expect(list.includes?("deep")).to be true
+      expect(list.includes?("dep")).to be false
+    end
+
+    it "removes last element and returns it" do
+      list = LinkedList.new
+      list.append("deep")
+      list.append("woo")
+      list.append("shi")
+      list.append("shu")
+      list.append("blop")
+
+      expect(list.pop).to eq("blop")
+      expect(list.to_string).to eq("deep woo shi shu")
+      expect(list.pop).to eq("shu")
+      expect(list.to_string).to eq("deep woo shi")
+    end
+
+    it "removes first element and returns it" do
+      list = LinkedList.new
+      list.append("deep")
+      list.append("woo")
+      list.append("shi")
+      list.append("shu")
+      list.append("blop")
+
+      expect(list.shift).to eq("deep")
+      expect(list.to_string).to eq("woo shi shu blop")
+      expect(list.shift).to eq("woo")
+      expect(list.to_string).to eq("shi shu blop")
+    end
+
+    it "clears the list" do 
+      list = LinkedList.new
+      list.append("deep")
+      list.append("woo")
+      list.append("shi")
+      list.append("shu")
+      list.append("blop")
+
+      expect(list.to_string).to eq("deep woo shi shu blop")
+      list.clear
+      expect(list.to_string).to eq([])
+    end
   end
 end
