@@ -11,4 +11,8 @@ class BeatBox
     end
   list
   end
+
+  def count
+    list.count
+  end
 end
