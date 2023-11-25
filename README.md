@@ -1,11 +1,11 @@
-# beatboxremix
+Beat Box Remix
 
-The idea of this project is to create a linked list that the computer can speak back to you. The primary goal was to practice making a linked list. 
+The idea of this project is to create a linked list that the computer can speak back to you. The primary goal was to practice making a linked list.
 
-This was one of the first projects that I did at Turing, and revisited before the next mod started to see what I've learned. 
+This was one of the first projects that I undertook at Turing, and I revisited it before the next module started to assess what I've learned.
 
-This was built in VSCode using Ruby, although I'm not sure why GitHub is saying HTML (at least they are as of 11/24/23). All of the tests were written using RSpec. SimpleCov and Pry were both used frequently as I worked on this.
+The project was built in VSCode using Ruby, although it's unclear why GitHub is indicating HTML (as of 11/24/23). All tests were written using RSpec. SimpleCov and Pry were both employed frequently as I worked on this.
 
-My goals for revisiting this project was to revisit Ruby after spending 6 weeks focusing heavily on rails, and focus on documentation. I have written detailed notes of how the methods I used work, and why I did them. I will be posting those in the blog of my website as a reference for whenever I may need them. I also wanted to make sure that all of my commits were clear, and followed a specific format. I like the idea of what I was doing, and plan to make a template for myself. However, this doesn't apply if I'm brought on to a project and they have their own way to document commits, but it's good for me to have this for my own projects. 
+My goals for revisiting this project were to refresh my knowledge of Ruby after six weeks of intensive focus on Rails, and to emphasize documentation. I've compiled detailed notes on how the methods I used work and the reasoning behind their implementation. These notes will be posted in the blog section of my website as a reference for future use. Additionally, I aimed to ensure that all my commits were clear and followed a specific format. While I appreciate the idea of creating a template for myself, I recognize that it may not be applicable if I join a project with its own commit documentation standards. Nevertheless, having a template is beneficial for my personal projects.
 
-It was fun to revisit this and see what I've learned, a mere 12 weeks later and this was quite a bit easier than the first time around. 
+Revisiting this project was enjoyable, and it allowed me to gauge my progress. Just 12 weeks later, I found it considerably easier than the first time around.
