@@ -8,7 +8,7 @@ class LinkedList
     if empty?
       @head = Node.new(data)
     else
-      current_node = @head
+      current_node = head
       while current_node.next_node != nil
         current_node = current_node.next_node
       end
@@ -25,7 +25,7 @@ class LinkedList
   def count
     return 0 if empty?
     count = 1
-    current_node = @head
+    current_node = head
       while current_node.next_node != nil
         current_node = current_node.next_node
         count += 1
@@ -39,7 +39,7 @@ class LinkedList
 
   def to_string
     new_string = []
-    current_node = @head
+    current_node = head
     return new_string if empty?
     while current_node.next_node != nil
       new_string << current_node.data
@@ -59,7 +59,7 @@ class LinkedList
   end
 
   def node_at(index, counter = 0)
-    current_node = @head
+    current_node = head
     while counter < index && current_node
       current_node = current_node.next_node
       counter += 1
@@ -81,7 +81,7 @@ class LinkedList
   end
 
   def includes?(data)
-    current_node = @head
+    current_node = head
     while current_node.next_node != nil
       return true if current_node.data == data
       current_node = current_node.next_node
@@ -97,8 +97,8 @@ class LinkedList
   end
 
   def shift
-    former_head = @head
-    @head = @head.next_node
+    former_head = head
+    @head = head.next_node
     return former_head.data
   end
 
