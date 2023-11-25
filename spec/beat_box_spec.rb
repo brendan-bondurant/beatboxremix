@@ -37,5 +37,14 @@ RSpec.describe BeatBox.new
 
       expect(bb.count).to eq(6)
     end
-  
+  end
+
+  describe 'play' do
+    it 'makes noise' do
+      bb = BeatBox.new
+      list = LinkedList.new
+      bb.append("deep doo ditt woo hoo shu")
+
+      expect(bb.play)
+    end
   end
